@@ -3,6 +3,12 @@
 Recommended Node version is 14.17.5 (current LTS and latest available as AWS lambda runtime)
 Package manager; Yarn
 
+TypeScript target is es6.
+SourceMap?
+
+ModulePath aliases https://nextjs.org/docs/advanced-features/module-path-aliases
+
+Testing setup docs https://nextjs.org/docs/testing
 
 
 
