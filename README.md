@@ -7,6 +7,7 @@ TypeScript target is es6.
 SourceMap?
 
 ModulePath aliases https://nextjs.org/docs/advanced-features/module-path-aliases
+- configure in tsconfig.json
 
 Testing setup docs https://nextjs.org/docs/testing
 
