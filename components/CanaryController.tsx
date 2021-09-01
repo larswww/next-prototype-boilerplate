@@ -1,7 +1,6 @@
 import Canary from "./Canary";
 import {useEffect, useState} from "react";
 
-
 export const CanaryController = () => {
     const [data, setData] = useState();
     const [loading, setLoading] = useState(true);
@@ -18,22 +17,18 @@ export const CanaryController = () => {
             } catch (e) {
                 setError(true)
             }
-
         };
         fetchData();
     }, [setData, setLoading]);
-
 
     return (
         <div>
             {loading && <p>Loading...</p>}
 
-            {data && !loading && !error && <Canary />}
+            {data && !loading && !error && <Canary message={data.message} />}
 
             {error && <p>Error</p>}
-
         </div>
-
     )
 }
 

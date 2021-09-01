@@ -1,4 +1,4 @@
 {
-  "canary": true,
+  "message": "Hello from Mock API with MSW.js",
   "meaning": 42
 }
