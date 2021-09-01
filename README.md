@@ -11,6 +11,12 @@ ModulePath aliases https://nextjs.org/docs/advanced-features/module-path-aliases
 
 Testing setup docs https://nextjs.org/docs/testing
 
+Enable API mocking by;
+- creating an .env.local
+- NEXT_PUBLIC_API_MOCKING=enabled
+
+
+$ npx msw init public/ --save
 
 
 
