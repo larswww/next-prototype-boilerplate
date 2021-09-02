@@ -10,7 +10,7 @@ export const CanaryController = () => {
         const fetchData = async () => {
             try {
                 setLoading(true);
-                const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/canary`,);
+                const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/canary`);
                 const json = await res.json();
                 setLoading(false)
                 setData(json);
@@ -25,7 +25,7 @@ export const CanaryController = () => {
         <div>
             {loading && <p>Loading...</p>}
 
-            {data && !loading && !error && <Canary message={data.message} />}
+            {data && !loading && !error && <Canary message={data.message}/>}
 
             {error && <p>Error</p>}
         </div>

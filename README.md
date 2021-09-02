@@ -18,7 +18,9 @@ Enable API mocking by;
 
 $ npx msw init public/ --save
 
+TypeScript non-strict thing?
 
+OpenAPI https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.1.0.md
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
