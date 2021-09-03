@@ -21,11 +21,6 @@ api.register('validationFail', (c, res, ctx) => res(
 // register custom handlers here
 api.register('canary', canaryHandler)
 
-/**
- * Will generate JSON schemas for all types/interfaces
- */
-const fixtureFileNames = ['canary']
-for (let fixture of fixtureFileNames) saveAsSchema(fixture)
 
 // tell msw to intercept all requests to api/* with our mock
 export const server = setupServer(

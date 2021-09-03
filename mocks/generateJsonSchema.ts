@@ -1,8 +1,8 @@
-import { resolve } from "path";
+import {resolve} from "path";
 import * as TJS from "typescript-json-schema";
 import * as fs from "fs";
-const fixtureDirectory = './mocks/fixtures'
 
+const fixtureDirectory = './mocks/fixtures'
 
 export const getSchema = (fileName: string) => {
     const program = TJS.getProgramFromFiles(
@@ -19,6 +19,12 @@ export const saveSchema = (schema: TJS.Definition | null, pathAndName: string) =
 export const saveAsSchema = (fileName: string) => {
     const schema = getSchema(fileName)
     saveSchema(schema, `${fixtureDirectory}/schemas/${fileName}.json`)
+    console.log('JSON Schema saved for ', fileName)
 }
 
-export default saveAsSchema
+export const generateSchemas = (): void => {
+    const fixtureFileNames = ['canary']
+    for (let fixture of fixtureFileNames) saveAsSchema(fixture)
+}
+
+export default generateSchemas

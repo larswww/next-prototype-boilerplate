@@ -3,7 +3,7 @@ import { render } from '@testing-library/react'
 import Index from '../pages/index'
 import Canary from '../components/Canary' //todo @components module mapping from tsconfig
 import {fixture} from "../mocks/fixtures/canary";
-import saveAsSchema from "../mocks/generateJsonSchema";
+import generateSchemas from "../mocks/generateJsonSchema";
 
 
 describe('Canary', () => {
@@ -36,7 +36,7 @@ describe('Canary', () => {
 
 
     test('save generated schema', () => {
-        expect(saveAsSchema('canary')).not.toThrowError()
+        expect(generateSchemas).not.toThrowError()
 
     })
 
