@@ -9,10 +9,30 @@
   },
   "servers": [
     {
-      "url": "http://petstore.swagger.io/v1"
+      "url": "http://localhost:3000/api"
     }
   ],
   "paths": {
+    "/canary": {
+      "get": {
+        "summary": "get canary object",
+        "operationId": "canary",
+        "responses": {
+          "200": {
+            "description": "ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/canary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+
+
     "/pets": {
       "get": {
         "summary": "List all pets",
@@ -131,6 +151,22 @@
   },
   "components": {
     "schemas": {
+      "canary": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "description": "A helpful message that will be added as description in the generated JSON schema.",
+            "minLength": 4,
+            "maxLength": 99,
+            "type": "string"
+          },
+          "meaning": {
+            "minimum": 42,
+            "maximum": 69,
+            "type": "number"
+          }
+        }
+      },
       "Pet": {
         "type": "object",
         "required": [
