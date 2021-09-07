@@ -4,7 +4,7 @@ import { handlers } from './handlers.js'
 import OpenAPIBackend from 'openapi-backend';
 import canaryHandler from "./handlers/canary";
 import definition from './OpenAPIdefinition.json'
-import saveAsSchema from "./generateJsonSchema";
+import saveAsSchema from "./typescriptJSONSchema";
 
 const api = new OpenAPIBackend({ definition });
 

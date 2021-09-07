@@ -4,6 +4,12 @@ import * as fs from "fs";
 
 const fixtureDirectory = './mocks/fixtures'
 
+export const getAllTsFiles = () => {
+    const files = fs.readdirSync(fixtureDirectory)
+    const typescriptFiles = files.filter(f => f.endsWith('.ts'))
+    return typescriptFiles
+}
+
 export const getSchema = (fileName: string) => {
     const program = TJS.getProgramFromFiles(
         [resolve(`${fixtureDirectory}/${fileName}`)],
@@ -23,7 +29,7 @@ export const saveAsSchema = (fileName: string) => {
 }
 
 export const generateSchemas = (): void => {
-    const fixtureFileNames = ['canary']
+    const fixtureFileNames = getAllTsFiles()
     for (let fixture of fixtureFileNames) saveAsSchema(fixture)
 }
 
